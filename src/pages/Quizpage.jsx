@@ -482,7 +482,7 @@ const Quizpage = () => {
   useEffect(() => {
     async function fetchQuestions() {
       try {
-        const response = await axios.get(`http://localhost:5000/get-quiz/${userEmail}`);
+        const response = await axios.get(`https://studysync-backend-pi.vercel.app/get-quiz/${userEmail}`);
         setQuestions(response.data);
         setLoading(false);
       } catch (error) {
@@ -513,7 +513,7 @@ const Quizpage = () => {
     setSubmitted(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/submit-quiz", {
+      const response = await axios.post("https://studysync-backend-pi.vercel.app/submit-quiz", {
         email: userEmail,
         answers: formattedAnswers,
       });

@@ -12,7 +12,7 @@ const Signup = () => {
   
     try {
       // Sign up the user
-      const response = await axios.post("http://localhost:5000/signup", formData);
+      const response = await axios.post("https://studysync-backend-pi.vercel.app/signup", formData);
       
       if (response.status === 201) {
         alert(response.data.message); // Handle success message from backend
@@ -40,7 +40,7 @@ const Signup = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-gray-700 mb-2">Name</label>
+            <label className="block text-gray-700 mb-2" name='name'>Name</label>
             <input
               type="text"
               value={name}
@@ -52,7 +52,7 @@ const Signup = () => {
           </div>
 
           <div>
-            <label className="block text-gray-700 mb-2">Email</label>
+            <label className="block text-gray-700 mb-2" name='email'>Email</label>
             <input
               type="email"
               value={email}

@@ -1039,7 +1039,7 @@ const Dashboard = () => {
     if (!userEmail) return;
 
     axios
-      .get(`http://localhost:5000/user-profile/${userEmail}`)
+      .get(`https://studysync-backend-pi.vercel.app/user-profile/${userEmail}`)
       .then((response) => {
         setUser(response.data);
         setUserGroupId(response.data.group_id);
@@ -1060,7 +1060,7 @@ const Dashboard = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/group-preferred-study-time/${email}`
+          `https://studysync-backend-pi.vercel.app/group-preferred-study-time/${email}`
         );
         setpreferredTime(response.data.preferredStudyTime);
       } catch (error) {
@@ -1074,7 +1074,7 @@ const Dashboard = () => {
   useEffect(() => {
     if (userGroupId) {
       axios
-        .get(`http://localhost:5000/active-groups/${userGroupId}`)
+        .get(`https://studysync-backend-pi.vercel.app/active-groups/${userGroupId}`)
         .then((response) => setGroup(response.data))
         .catch((error) => console.error('Error fetching group data:', error));
     }
