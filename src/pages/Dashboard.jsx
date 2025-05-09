@@ -30,7 +30,7 @@
 //     }
 
 //     // Fetch user data
-//     axios.get(`http://localhost:5000/user-profile/${userEmail}`)
+//     axios.get(`https://studysync-backend-lct3.onrender.com/user-profile/${userEmail}`)
 //       .then(response => {
 //         setUser(response.data);
 //         setUserGroupId(response.data.group_id);
@@ -50,7 +50,7 @@
 //       if (!email) return;
 
 //       try {
-//         const response = await axios.get(`http://localhost:5000/group-preferred-study-time/${email}`);
+//         const response = await axios.get(`https://studysync-backend-lct3.onrender.com/group-preferred-study-time/${email}`);
 //         setpreferredTime(response.data.preferredStudyTime);  // Save it to the state variable
 //       } catch (error) {
 //         console.error("Error fetching preferred study time:", error);
@@ -62,7 +62,7 @@
 
 //   useEffect(() => {
 //     if (userGroupId) {
-//       axios.get(`http://localhost:5000/active-groups/${userGroupId}`)
+//       axios.get(`https://studysync-backend-lct3.onrender.com/active-groups/${userGroupId}`)
 //         .then(response => setGroup(response.data))
 //         .catch(error => console.error("Error fetching group data:", error));
 //     }
@@ -242,7 +242,7 @@
 //     if (!userEmail) return;
 
 //     axios
-//       .get(`http://localhost:5000/user-profile/${userEmail}`)
+//       .get(`https://studysync-backend-lct3.onrender.com/user-profile/${userEmail}`)
 //       .then((response) => {
 //         setUser(response.data);
 //         setUserGroupId(response.data.group_id);
@@ -263,7 +263,7 @@
 
 //       try {
 //         const response = await axios.get(
-//           `http://localhost:5000/group-preferred-study-time/${email}`
+//           `https://studysync-backend-lct3.onrender.com/group-preferred-study-time/${email}`
 //         );
 //         setpreferredTime(response.data.preferredStudyTime);
 //       } catch (error) {
@@ -277,7 +277,7 @@
 //   useEffect(() => {
 //     if (userGroupId) {
 //       axios
-//         .get(`http://localhost:5000/active-groups/${userGroupId}`)
+//         .get(`https://studysync-backend-lct3.onrender.com/active-groups/${userGroupId}`)
 //         .then((response) => setGroup(response.data))
 //         .catch((error) => console.error('Error fetching group data:', error));
 //     }
@@ -602,7 +602,7 @@
 //     if (!userEmail) return;
 
 //     axios
-//       .get(`http://localhost:5000/user-profile/${userEmail}`)
+//       .get(`https://studysync-backend-lct3.onrender.com/user-profile/${userEmail}`)
 //       .then((response) => {
 //         setUser(response.data);
 //         setUserGroupId(response.data.group_id);
@@ -623,7 +623,7 @@
 
 //       try {
 //         const response = await axios.get(
-//           `http://localhost:5000/group-preferred-study-time/${email}`
+//           `https://studysync-backend-lct3.onrender.com/group-preferred-study-time/${email}`
 //         );
 //         setpreferredTime(response.data.preferredStudyTime);
 //       } catch (error) {
@@ -637,7 +637,7 @@
 //   useEffect(() => {
 //     if (userGroupId) {
 //       axios
-//         .get(`http://localhost:5000/active-groups/${userGroupId}`)
+//         .get(`https://studysync-backend-lct3.onrender.com/active-groups/${userGroupId}`)
 //         .then((response) => setGroup(response.data))
 //         .catch((error) => console.error('Error fetching group data:', error));
 //     }
@@ -1039,7 +1039,7 @@ const Dashboard = () => {
     if (!userEmail) return;
 
     axios
-      .get(`https://studysync-backend-pi.vercel.app/user-profile/${userEmail}`)
+      .get(`https://studysync-backend-lct3.onrender.com/user-profile/${userEmail}`)
       .then((response) => {
         setUser(response.data);
         setUserGroupId(response.data.group_id);
@@ -1060,7 +1060,7 @@ const Dashboard = () => {
 
       try {
         const response = await axios.get(
-          `https://studysync-backend-pi.vercel.app/group-preferred-study-time/${email}`
+          `https://studysync-backend-lct3.onrender.com/group-preferred-study-time/${email}`
         );
         setpreferredTime(response.data.preferredStudyTime);
       } catch (error) {
@@ -1074,7 +1074,7 @@ const Dashboard = () => {
   useEffect(() => {
     if (userGroupId) {
       axios
-        .get(`https://studysync-backend-pi.vercel.app/active-groups/${userGroupId}`)
+        .get(`https://studysync-backend-lct3.onrender.com/active-groups/${userGroupId}`)
         .then((response) => setGroup(response.data))
         .catch((error) => console.error('Error fetching group data:', error));
     }

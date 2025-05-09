@@ -16,7 +16,7 @@ const Login = () => {
       // Clear previous session data
       localStorage.clear();
   
-      const response = await axios.post('https://studysync-backend-pi.vercel.app/login', { email, password });
+      const response = await axios.post('https://studysync-backend-lct3.onrender.com/login', { email, password });
       const { token } = response.data;
   
       // Store user email and token

@@ -102,7 +102,7 @@ const ProfilePage = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("https://studysync-backend-pi.vercel.app/update-profile", {
+      const response = await fetch("https://studysync-backend-lct3.onrender.com/update-profile", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -480,7 +480,7 @@ export default ProfilePage;
 //     event.preventDefault();
 
 //     try {
-//       const response = await fetch("http://localhost:5000/update-profile", {
+//       const response = await fetch("https://studysync-backend-lct3.onrender.com/update-profile", {
 //         method: "PUT",
 //         headers: {
 //           "Content-Type": "application/json",

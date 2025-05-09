@@ -16,7 +16,7 @@
 //   useEffect(() => {
 //     async function fetchQuestions() {
 //       try {
-//         const response = await axios.get(`http://localhost:5000/get-quiz/${userEmail}`);
+//         const response = await axios.get(`https://studysync-backend-lct3.onrender.com/get-quiz/${userEmail}`);
 //         setQuestions(response.data);
 //         setLoading(false);
 //       } catch (error) {
@@ -49,7 +49,7 @@
 //     setSubmitted(true);
 
 //     try {
-//       await axios.post("http://localhost:5000/submit-quiz", {
+//       await axios.post("https://studysync-backend-lct3.onrender.com/submit-quiz", {
 //         userEmail,
 //         score: calculatedScore,
 //       });
@@ -122,7 +122,7 @@
 //   useEffect(() => {
 //     async function fetchQuestions() {
 //       try {
-//         const response = await axios.get(`http://localhost:5000/get-quiz/${userEmail}`);
+//         const response = await axios.get(`https://studysync-backend-lct3.onrender.com/get-quiz/${userEmail}`);
 //         setQuestions(response.data);
 //         setLoading(false);
 //       } catch (error) {
@@ -152,7 +152,7 @@
 //   //   }));
 
 //   //   try {
-//   //     const response = await axios.post("http://localhost:5000/submit-quiz", {
+//   //     const response = await axios.post("https://studysync-backend-lct3.onrender.com/submit-quiz", {
 //   //       email: userEmail,
 //   //       answers: formattedAnswers,
 //   //     });
@@ -170,7 +170,7 @@
 //     }));
 
 //     try {
-//         const response = await axios.post("http://localhost:5000/submit-quiz", {
+//         const response = await axios.post("https://studysync-backend-lct3.onrender.com/submit-quiz", {
 //             email: userEmail,
 //             answers: answersArray,
 //         });
@@ -249,7 +249,7 @@
 //   useEffect(() => {
 //     async function fetchQuestions() {
 //       try {
-//         const response = await axios.get(`http://localhost:5000/get-quiz/${userEmail}`);
+//         const response = await axios.get(`https://studysync-backend-lct3.onrender.com/get-quiz/${userEmail}`);
 //         setQuestions(response.data);
 //         setLoading(false);
 //       } catch (error) {
@@ -279,7 +279,7 @@
 //   //   }));
 
 //   //   try {
-//   //     const response = await axios.post("http://localhost:5000/submit-quiz", {
+//   //     const response = await axios.post("https://studysync-backend-lct3.onrender.com/submit-quiz", {
 //   //       email: userEmail,
 //   //       answers: answersArray,
 //   //     });
@@ -303,7 +303,7 @@
 //     setSubmitted(true);
   
 //     try {
-//       const response = await axios.post("http://localhost:5000/submit-quiz", {
+//       const response = await axios.post("https://studysync-backend-lct3.onrender.com/submit-quiz", {
 //         email: userEmail,
 //         answers: formattedAnswers, // Send array of answers
 //       });
@@ -364,7 +364,7 @@
   // useEffect(() => {
   //   async function fetchQuestions() {
   //     try {
-  //       const response = await axios.get(`http://localhost:5000/get-quiz/${userEmail}`);
+  //       const response = await axios.get(`https://studysync-backend-lct3.onrender.com/get-quiz/${userEmail}`);
   //       setQuestions(response.data);
   //       setLoading(false);
   //     } catch (error) {
@@ -395,7 +395,7 @@
   //   setSubmitted(true);
 
   //   try {
-  //     const response = await axios.post("http://localhost:5000/submit-quiz", {
+  //     const response = await axios.post("https://studysync-backend-lct3.onrender.com/submit-quiz", {
   //       email: userEmail,
   //       answers: formattedAnswers,
   //     });
@@ -482,7 +482,7 @@ const Quizpage = () => {
   useEffect(() => {
     async function fetchQuestions() {
       try {
-        const response = await axios.get(`https://studysync-backend-pi.vercel.app/get-quiz/${userEmail}`);
+        const response = await axios.get(`https://studysync-backend-lct3.onrender.com/get-quiz/${userEmail}`);
         setQuestions(response.data);
         setLoading(false);
       } catch (error) {
@@ -513,7 +513,7 @@ const Quizpage = () => {
     setSubmitted(true);
 
     try {
-      const response = await axios.post("https://studysync-backend-pi.vercel.app/submit-quiz", {
+      const response = await axios.post("https://studysync-backend-lct3.onrender.com/submit-quiz", {
         email: userEmail,
         answers: formattedAnswers,
       });

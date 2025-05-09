@@ -941,7 +941,7 @@ import {
 import { Send, AttachFile, ArrowBack } from "@mui/icons-material";
 
 // Connect to socket server
-const socket = io("https://studysync-backend-pi.vercel.app", { transports: ["websocket", "polling"] });
+const socket = io("https://studysync-backend-lct3.onrender.com", { transports: ["websocket", "polling"] });
 
 export default function ChatPage({ userEmail }) {
   const [groupId, setGroupId] = useState(null);
@@ -958,7 +958,7 @@ export default function ChatPage({ userEmail }) {
       const email = userEmail || localStorage.getItem("userEmail");
       if (!email) return;
       try {
-        const response = await axios.get(`https://studysync-backend-pi.vercel.app/user-group/${email}`);
+        const response = await axios.get(`https://studysync-backend-lct3.onrender.com/user-group/${email}`);
         setGroupId(response.data.groupId);
         socket.emit("joinGroup", response.data.groupId);
         fetchGroupMembers(response.data.groupId);
@@ -973,7 +973,7 @@ export default function ChatPage({ userEmail }) {
     if (!groupId) return;
     async function fetchMessages() {
       try {
-        const response = await axios.get(`https://studysync-backend-pi.vercel.app/chat/${groupId}`);
+        const response = await axios.get(`https://studysync-backend-lct3.onrender.com/chat/${groupId}`);
         setMessages(response.data);
       } catch (err) {
         console.error("Error fetching messages:", err);
@@ -997,7 +997,7 @@ export default function ChatPage({ userEmail }) {
 
   async function fetchGroupMembers(groupId) {
     try {
-      const response = await axios.get(`https://studysync-backend-pi.vercel.app/group-members/${groupId}`);
+      const response = await axios.get(`https://studysync-backend-lct3.onrender.com/group-members/${groupId}`);
       setGroupMembers(response.data);
     } catch (err) {
       console.error("Error fetching group members:", err);
@@ -1021,7 +1021,7 @@ export default function ChatPage({ userEmail }) {
     formData.append("sender", email);
 
     try {
-      const response = await axios.post("https://studysync-backend-pi.vercel.app/upload", formData, {
+      const response = await axios.post("https://studysync-backend-lct3.onrender.com/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

@@ -12,8 +12,8 @@ const Signup = () => {
   
     try {
       // Sign up the user
-      const response = await axios.post("https://studysync-backend-pi.vercel.app/signup", formData);
-      
+      const response = await axios.post("https://studysync-backend-lct3.onrender.com/signup", formData);
+      console.log(response)
       if (response.status === 201) {
         alert(response.data.message); // Handle success message from backend
   
@@ -24,6 +24,7 @@ const Signup = () => {
         navigate("/profile");
       }
     } catch (error) {
+      console.log(error)
       console.error(error);
       alert("Error signing up");
     }
